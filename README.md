@@ -2,7 +2,7 @@
 
 
 ***Although you can do this with Webpack, the [Metro bundler](https://facebook.github.io/metro/) included with React Native does a better job and it's baked into [Expo](https://reactnative.dev/docs/environment-setup).***  
-The bundling provided by Metro is smaller and produced faster, don't use Webpack if you want to do this, this should only be used as a last resort for compatibility.
+This type of build should only be used as a last resort for compatibility.
 
 
 An example of react-three-fiber with:
