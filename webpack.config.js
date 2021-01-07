@@ -1,5 +1,4 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const DEV = false;
@@ -62,15 +61,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin(),
-    new webpack.DefinePlugin({
-      "process.browser": true,
-      "process.env.READABLE_STREAM": true,
-      "process.env.APP_MANIFEST": false,
-      __DEV__: DEV,
-    }),
-  ],
+  plugins: [new HtmlWebpackPlugin()],
   resolve: {
     extensions: [
       ".web.js",
@@ -85,9 +76,6 @@ module.exports = {
     ],
     alias: {
       "react-native$": "react-native-web/src",
-      crypto: "crypto-browserify",
-      stream: "stream-browserify",
-      randombytes: "randombytes/browser",
       "@babel/runtime/helpers/esm/extends": "@babel/runtime/helpers/extends",
     },
   },
